@@ -3,7 +3,10 @@
   max-width: 1200px;
   padding: 0 50px;
 }
-
+a {
+  color: inherit;
+  text-decoration: none;
+}
 .products-filters {
   display: flex;
   gap: 30px;
@@ -40,4 +43,18 @@ select {
   height: 40px;
   font-size: 1.1em;
   padding: 0 15px;
+}
+
+.suppliers {
+  display: flex; 
+  gap: 20px;
+  font-size: 0.8em;
+}
+
+.suppliers a {
+  transition: all .1s linear;
+}
+
+.suppliers a:hover {
+  color: #81d74f;
 }

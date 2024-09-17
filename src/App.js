@@ -12,7 +12,7 @@ function App() {
 
   const products = [
     { id: 1, name: "Apple iPhone 12", price: 799, categoryId: 1, supplierIds: [1, 2] },
-    { id: 2, name: "Samsung Galaxy S21", price: 699, categoryId: 1, supplierIds: [2, 3] },
+    { id: 2, name: "Samsung Galaxy S21", price: 699, categoryId: 1, supplierIds: [1, 2, 3] },
     { id: 3, name: "Google Pixel 5", price: 599, categoryId: 1, supplierIds: [1, 3] },
     { id: 4, name: "OnePlus 9", price: 729, categoryId: 1, supplierIds: [2] },
     { id: 5, name: "Sony Xperia 5", price: 649, categoryId: 1, supplierIds: [3] },
@@ -21,7 +21,7 @@ function App() {
     { id: 8, name: "Dell XPS 13", price: 1100, categoryId: 2, supplierIds: [5] },
     { id: 9, name: "Apple MacBook Air", price: 999, categoryId: 2, supplierIds: [1, 4] },
     { id: 10, name: "Microsoft Surface Laptop 4", price: 1029, categoryId: 2, supplierIds: [5] },
-    { id: 11, name: "Asus ZenBook 13", price: 899, categoryId: 2, supplierIds: [4] },
+    { id: 11, name: "Asus ZenBook 13", price: 899, categoryId: 2, supplierIds: [1, 4, 5] },
     { id: 12, name: "Acer Swift 3", price: 670, categoryId: 2, supplierIds: [3] },
     { id: 13, name: "Lenovo Yoga 9i", price: 1399, categoryId: 2, supplierIds: [5] },
     { id: 14, name: "Apple iPad Pro", price: 799, categoryId: 3, supplierIds: [1] },
@@ -68,7 +68,11 @@ function App() {
           <SortProducts/>
         </div>
         <div className="products-list">
-          <ProductList products={filteredProducts}/>
+          <ProductList 
+            products={filteredProducts}
+            suppliers={suppliers}
+            categories={categories}
+          />
         </div>
       </div>
     </div>
