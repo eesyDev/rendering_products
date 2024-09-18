@@ -3,9 +3,19 @@
   max-width: 1200px;
   padding: 0 50px;
 }
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 50px;
+}
 a {
   color: inherit;
   text-decoration: none;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
 .products-filters {
   display: flex;
@@ -30,6 +40,9 @@ a {
   box-shadow: 0 0 5px rgba(0, 0, 0, .1);
   transition: all .3s ease-in-out;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .product:hover {
@@ -49,6 +62,7 @@ select {
   display: flex; 
   gap: 20px;
   font-size: 0.8em;
+  flex-wrap: wrap;
 }
 
 .suppliers a {
@@ -57,4 +71,8 @@ select {
 
 .suppliers a:hover {
   color: #81d74f;
+}
+
+.product img {
+  height: 200px;
 }
